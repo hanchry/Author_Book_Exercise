@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using AuthorAPI.DataAccess.Database;
 using AuthorAPI.Models;
@@ -20,10 +21,16 @@ namespace AuthorAPI.DataAccess.Data
             await Context.SaveChangesAsync();
             return book;
         }
+        public async Task DeleteBook(int isbn)
+        {
+            Book adultToDelete = Context.Books.FirstOrDefault(t => t.ISBN == 1);
+            Context.Books.Remove(adultToDelete);
+            await Context.SaveChangesAsync();
+        }
 
         public async Task<IList<Book>> getAllBooksAsync()
         {
-            return await Context.Books.ToListAsync();
+            return await Context.Books.Include(c=>c.Author).ToListAsync();
         }
     }
 }

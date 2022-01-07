@@ -29,6 +29,7 @@ namespace AuthorBlazor
             services.AddRazorPages();
             services.AddServerSideBlazor();
             services.AddScoped<IAdultController, AdultReader>();
+            services.AddScoped<IBookController, BookReader>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

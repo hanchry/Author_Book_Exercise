@@ -55,3 +55,5 @@ C:\Users\hanch\Desktop\Exam-A20-304160\AuthorBlazor\obj\Debug\net5.0\AuthorBlazo
 C:\Users\hanch\Desktop\Exam-A20-304160\AuthorBlazor\bin\Debug\net5.0\Newtonsoft.Json.dll
 C:\Users\hanch\Desktop\Exam-A20-304160\AuthorBlazor\obj\Debug\net5.0\RazorDeclaration\Pages\CreateAuthor.razor.g.cs
 C:\Users\hanch\Desktop\Exam-A20-304160\AuthorBlazor\obj\Debug\net5.0\Razor\Pages\CreateAuthor.razor.g.cs
+C:\Users\hanch\Desktop\Exam-A20-304160\AuthorBlazor\obj\Debug\net5.0\RazorDeclaration\Pages\BookList.razor.g.cs
+C:\Users\hanch\Desktop\Exam-A20-304160\AuthorBlazor\obj\Debug\net5.0\Razor\Pages\BookList.razor.g.cs

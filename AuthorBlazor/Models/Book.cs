@@ -11,5 +11,6 @@ namespace AuthorAPI.Models
         public int PublicationYear { get; set; }
         public int NumberOfPages { get; set; }
         public string Genre { get; set; }
+        public Author Author { get; set; }
     }
 }

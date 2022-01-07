@@ -26,8 +26,6 @@ namespace AuthorAPI.Controllers
             try
             {
                 Author added = authorReader.AddAuthor(author).Result;
-                Console.WriteLine("asd");
-                Console.WriteLine(author);
                 return Created($"/{added.Id}", added);
             }
             catch (Exception e)

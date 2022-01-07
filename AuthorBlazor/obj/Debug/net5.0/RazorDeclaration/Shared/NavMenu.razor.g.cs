@@ -97,7 +97,7 @@ using AuthorBlazor.Pages;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 24 "C:\Users\hanch\Desktop\Exam-A20-304160\AuthorBlazor\Shared\NavMenu.razor"
+#line 29 "C:\Users\hanch\Desktop\Exam-A20-304160\AuthorBlazor\Shared\NavMenu.razor"
        
     private bool collapseNavMenu = true;
 

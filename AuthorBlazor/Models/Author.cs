@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
@@ -11,6 +12,6 @@ namespace AuthorAPI.Models
         public string FirsName { get; set; }
         [Required, MaxLength(15)]
         public string LastName { get; set; }
-        public IList<Book> Books { get; set; }
+       // public IList<Book> Books { get; set; }
     }
 }

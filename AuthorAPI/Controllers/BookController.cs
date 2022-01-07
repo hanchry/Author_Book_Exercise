@@ -47,6 +47,24 @@ namespace AuthorAPI.Controllers
                     return StatusCode(500, e);
                 }
             }
-        
+            [HttpDelete]
+            [Route("{isbn}")]
+            public async Task<ActionResult> deleteBook([FromRoute] int isbn)
+            {
+                Console.WriteLine("deleteBook");
+                try
+                {
+                    Console.WriteLine("deleteBook");
+                    await bookReader.DeleteBook(isbn);
+                    Console.WriteLine("deleteBook");
+                    return Ok();
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                    return StatusCode(500, e.Message);
+                }
+            }
+            
         }
 }

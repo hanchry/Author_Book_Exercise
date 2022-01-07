@@ -1,0 +1,64 @@
+@page "/BookList"
+@using AuthorAPI.Models
+@using AuthorBlazor.Data
+@using Microsoft.AspNetCore.Authentication.OAuth.Claims
+@inject NavigationManager NavigationManager
+@inject IBookController bookController
+<h3>BookList</h3>
+
+@if (booksToShow == null)
+{
+    <p>
+        <em>Loading...</em>
+    </p>
+}
+else
+{
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Title</th>
+            <th>PublicationYear</th>
+            <th>NumberOfPages</th>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>Delete</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in booksToShow)
+        {
+            <tr>
+                <td>@item.Tittle</td>
+                <td>@item.PublicationYear</td>
+                <td>@item.NumberOfPages</td>
+                <td>@item.Author.FirsName</td>
+                <td>@item.Author.LastName</td>
+                <td>
+                    <button @onclick="@(() => Delete(item))">
+                        <i class="oi oi-trash" style="color:red"/>
+                    </button>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+
+@code {
+    private IList<Book> booksToShow;
+    private IList<Book> allBooks;
+
+    protected override async Task OnInitializedAsync()
+    {
+        allBooks = await bookController.GetBook();
+        booksToShow = allBooks;
+    }
+
+    private async void Delete(Book item)
+    {
+        booksToShow.Remove(item);
+        await bookController.DeleteBook(item);
+    }
+
+}
