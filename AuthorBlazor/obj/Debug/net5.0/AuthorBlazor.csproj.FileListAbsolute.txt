@@ -52,3 +52,6 @@ C:\Users\hanch\Desktop\Exam-A20-304160\AuthorBlazor\obj\Debug\net5.0\ref\AuthorB
 C:\Users\hanch\Desktop\Exam-A20-304160\AuthorBlazor\obj\Debug\net5.0\AuthorBlazor.pdb
 C:\Users\hanch\Desktop\Exam-A20-304160\AuthorBlazor\obj\Debug\net5.0\AuthorBlazor.genruntimeconfig.cache
 C:\Users\hanch\Desktop\Exam-A20-304160\AuthorBlazor\obj\Debug\net5.0\AuthorBlazor.csproj.CopyComplete
+C:\Users\hanch\Desktop\Exam-A20-304160\AuthorBlazor\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\hanch\Desktop\Exam-A20-304160\AuthorBlazor\obj\Debug\net5.0\RazorDeclaration\Pages\CreateAuthor.razor.g.cs
+C:\Users\hanch\Desktop\Exam-A20-304160\AuthorBlazor\obj\Debug\net5.0\Razor\Pages\CreateAuthor.razor.g.cs

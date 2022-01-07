@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "5sWhy/1hp6Ixm+y09l/nLOcq/d+++SY9vN1zyYOUuzg9cGAd2rLqLxbD0Ix8X1phvtNuD+rSsemFnXa5a7vq7w==",
+  "dgSpecHash": "VyT1KXuNfXrjTgtJz/CSqZVFmo/EDEgl/H6CkxAOgyxr8c8DNuHMQf/UvE239WmqJRAE0skpZXR/Uvhd9Rsopg==",
   "success": true,
   "projectFilePath": "C:\\Users\\hanch\\Desktop\\Exam-A20-304160\\AuthorBlazor\\AuthorBlazor.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\hanch\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512"
+  ],
   "logs": []
 }
