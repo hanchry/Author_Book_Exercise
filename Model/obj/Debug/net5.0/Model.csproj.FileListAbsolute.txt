@@ -1,0 +1,12 @@
+C:\Users\hanch\Desktop\Exam-A20-304160\Model\bin\Debug\net5.0\Model.deps.json
+C:\Users\hanch\Desktop\Exam-A20-304160\Model\bin\Debug\net5.0\Model.dll
+C:\Users\hanch\Desktop\Exam-A20-304160\Model\bin\Debug\net5.0\ref\Model.dll
+C:\Users\hanch\Desktop\Exam-A20-304160\Model\bin\Debug\net5.0\Model.pdb
+C:\Users\hanch\Desktop\Exam-A20-304160\Model\obj\Debug\net5.0\Model.csproj.AssemblyReference.cache
+C:\Users\hanch\Desktop\Exam-A20-304160\Model\obj\Debug\net5.0\Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hanch\Desktop\Exam-A20-304160\Model\obj\Debug\net5.0\Model.AssemblyInfoInputs.cache
+C:\Users\hanch\Desktop\Exam-A20-304160\Model\obj\Debug\net5.0\Model.AssemblyInfo.cs
+C:\Users\hanch\Desktop\Exam-A20-304160\Model\obj\Debug\net5.0\Model.csproj.CoreCompileInputs.cache
+C:\Users\hanch\Desktop\Exam-A20-304160\Model\obj\Debug\net5.0\Model.dll
+C:\Users\hanch\Desktop\Exam-A20-304160\Model\obj\Debug\net5.0\ref\Model.dll
+C:\Users\hanch\Desktop\Exam-A20-304160\Model\obj\Debug\net5.0\Model.pdb

@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using AuthorAPI.Models;
+
+using Model;
 using Newtonsoft.Json;
 
 namespace AuthorBlazor.Data

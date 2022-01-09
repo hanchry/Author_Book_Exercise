@@ -57,3 +57,7 @@ C:\Users\hanch\Desktop\Exam-A20-304160\AuthorBlazor\obj\Debug\net5.0\RazorDeclar
 C:\Users\hanch\Desktop\Exam-A20-304160\AuthorBlazor\obj\Debug\net5.0\Razor\Pages\CreateAuthor.razor.g.cs
 C:\Users\hanch\Desktop\Exam-A20-304160\AuthorBlazor\obj\Debug\net5.0\RazorDeclaration\Pages\BookList.razor.g.cs
 C:\Users\hanch\Desktop\Exam-A20-304160\AuthorBlazor\obj\Debug\net5.0\Razor\Pages\BookList.razor.g.cs
+C:\Users\hanch\Desktop\Exam-A20-304160\AuthorBlazor\obj\Debug\net5.0\RazorDeclaration\Pages\AddBook.razor.g.cs
+C:\Users\hanch\Desktop\Exam-A20-304160\AuthorBlazor\obj\Debug\net5.0\Razor\Pages\AddBook.razor.g.cs
+C:\Users\hanch\Desktop\Exam-A20-304160\AuthorBlazor\bin\Debug\net5.0\Model.dll
+C:\Users\hanch\Desktop\Exam-A20-304160\AuthorBlazor\bin\Debug\net5.0\Model.pdb

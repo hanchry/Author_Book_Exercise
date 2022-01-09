@@ -1,0 +1,49 @@
+@page "/AddBook"
+@using AuthorBlazor.Data
+@using Microsoft.AspNetCore.Components
+@using Model
+@inject NavigationManager NavigationManager
+@inject IAdultController AdultController
+@inject IBookController bookController
+
+<h3>AddBook</h3>
+
+<EditForm Model="@newBook" OnValidSubmit="@AddNewBook">
+    <DataAnnotationsValidator/> <ValidationSummary/>
+    <div class="form-group"> Tittle:<br/> <InputText @bind-Value="newBook.Tittle"/> </div>
+    <div class="form-group"> PublicationYear:<br/> <InputNumber rows="4" @bind-Value="newBook.PublicationYear"/> </div>
+    <div class="form-group"> NumberOfPages:<br/> <InputNumber @bind-Value="newBook.NumberOfPages"/> </div>
+    <div class="form-group"> Genre:<br/> <InputText rows="4" @bind-Value="newBook.Genre"/> </div>
+    <div class="flex items-center mb-5">
+        <!--         tip - here neede inline-block , but why? -->
+        <label for="number" class="inline-block w-20 mr-6 text-right
+                                            font-bold text-gray-600">Author</label>
+         <InputSelect @bind-Value="id" class="flex-1 py-2 border-b-2 border-gray-400 focus:border-green-400
+                                  text-gray-600 placeholder-gray-400
+                                  outline-none">
+             @foreach (Author author in allAuthors)
+             {
+                 <option value=@author.Id>@author.FirsName  @author.LastName</option>
+             }
+         </InputSelect>
+    </div>
+    
+    <p class="actions"> <button class="btn btn-outline-dark" type="submit">Create</button> </p>
+</EditForm>
+
+@code {
+    private IList<Author> allAuthors = new List<Author>();
+    private Book newBook = new Book();
+    private int id;
+    
+    protected override async Task OnInitializedAsync()
+    {
+        allAuthors = await AdultController.GetAuthor();
+    }
+    
+    private void AddNewBook()
+    {
+        bookController.AddBook(newBook, id);
+        NavigationManager.NavigateTo("/");
+    }
+}

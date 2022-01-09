@@ -59,3 +59,5 @@ C:\Users\hanch\Desktop\Exam-A20-304160\AuthorAPI\obj\Debug\net5.0\AuthorAPI.dll
 C:\Users\hanch\Desktop\Exam-A20-304160\AuthorAPI\obj\Debug\net5.0\ref\AuthorAPI.dll
 C:\Users\hanch\Desktop\Exam-A20-304160\AuthorAPI\obj\Debug\net5.0\AuthorAPI.pdb
 C:\Users\hanch\Desktop\Exam-A20-304160\AuthorAPI\obj\Debug\net5.0\AuthorAPI.genruntimeconfig.cache
+C:\Users\hanch\Desktop\Exam-A20-304160\AuthorAPI\bin\Debug\net5.0\Model.dll
+C:\Users\hanch\Desktop\Exam-A20-304160\AuthorAPI\bin\Debug\net5.0\Model.pdb

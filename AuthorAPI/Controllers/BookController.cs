@@ -2,8 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using AuthorAPI.DataAccess.Data;
-using AuthorAPI.Models;
 using Microsoft.AspNetCore.Mvc;
+using Model;
 
 namespace AuthorAPI.Controllers
 {
@@ -12,18 +12,21 @@ namespace AuthorAPI.Controllers
         public class BookController: ControllerBase
         {
             private IBookReader bookReader;
+            private IAuthorReader authorReader;
 
-            public BookController(IBookReader bookReader)
+            public BookController(IBookReader bookReader, IAuthorReader authorReader)
             {
                 this.bookReader = bookReader;
+                this.authorReader = authorReader;
             }
 
             [HttpPost]
-            public async Task<ActionResult<Book>> addBook([FromBody] Book book)
+            [Route("{id}")]
+            public async Task<ActionResult<Book>> addBook([FromBody] Book book, [FromRoute] int id)
             {
                 try
                 {
-                    Book added = bookReader.AddBook(book).Result;
+                    Book added = bookReader.AddBook(book, id).Result;
                     return Created($"/{added.ISBN}", added);
                 }
                 catch (Exception e)
@@ -33,20 +36,20 @@ namespace AuthorAPI.Controllers
                 }
             }
 
-            [HttpGet]
-            public async Task<ActionResult<IList<Book>>> getAuthors()
-            {
-                try
-                {
-                    IList<Book> books = bookReader.getAllBooksAsync().Result;
-                    return Ok(books);
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e);
-                    return StatusCode(500, e);
-                }
-            }
+            // [HttpGet]
+            // public async Task<ActionResult<IList<Book>>> getAuthors()
+            // {
+            //     try
+            //     {
+            //         IList<Book> books = bookReader.getAllBooksAsync().Result;
+            //         return Ok(books);
+            //     }
+            //     catch (Exception e)
+            //     {
+            //         Console.WriteLine(e);
+            //         return StatusCode(500, e);
+            //     }
+            // }
             [HttpDelete]
             [Route("{isbn}")]
             public async Task<ActionResult> deleteBook([FromRoute] int isbn)

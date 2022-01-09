@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using AuthorAPI.Models;
+using Model;
 
 namespace AuthorBlazor.Data
 {
@@ -8,6 +8,6 @@ namespace AuthorBlazor.Data
     {
         Task<List<Book>> GetBook();
         Task DeleteBook(Book book);
-        Task AddBook(Book book);
+        Task AddBook(Book book, int id);
     }
 }

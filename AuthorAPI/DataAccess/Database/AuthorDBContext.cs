@@ -1,5 +1,6 @@
-using AuthorAPI.Models;
+
 using Microsoft.EntityFrameworkCore;
+using Model;
 
 namespace AuthorAPI.DataAccess.Database
 {

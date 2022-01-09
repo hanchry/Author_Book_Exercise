@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using AuthorAPI.Models;
+using Model;
 
 namespace AuthorBlazor.Data
 {

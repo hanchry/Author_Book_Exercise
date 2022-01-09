@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AuthorAPI.DataAccess.Database;
-using AuthorAPI.Models;
 using Microsoft.EntityFrameworkCore;
+using Model;
 
 namespace AuthorAPI.DataAccess.Data
 {
@@ -26,7 +26,7 @@ namespace AuthorAPI.DataAccess.Data
 
         public async Task<IList<Author>> getAllAuthorsAsync()
         {
-            return await Context.Authors.ToListAsync();
+            return await Context.Authors.Include(t=>t.Books).ToListAsync();
         }
     }
 }

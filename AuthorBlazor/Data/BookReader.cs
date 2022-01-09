@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using AuthorAPI.Models;
+using Model;
 using Newtonsoft.Json;
 
 namespace AuthorBlazor.Data
@@ -37,11 +37,11 @@ namespace AuthorBlazor.Data
             Console.WriteLine("DeleteBook");
         }
 
-        public async Task AddBook(Book book)
+        public async Task AddBook(Book book, int id)
         {
             string serialized = JsonConvert.SerializeObject(book);
             StringContent content = new StringContent(serialized, Encoding.UTF8, "application/json");
-            await client.PostAsync($"{uri}/Author", content);
+            await client.PostAsync($"{uri}/Book/{id}", content);
         }
     }
 }

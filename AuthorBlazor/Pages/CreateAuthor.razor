@@ -1,6 +1,7 @@
 @page "/CreateAuthor"
-@using AuthorAPI.Models
 @using AuthorBlazor.Data
+@using Microsoft.AspNetCore.Components
+@using Model
 @inject NavigationManager NavigationManager
 @inject IAdultController AdultController
 
@@ -18,8 +19,8 @@
     
     private void AddNewAuthor()
     {
+        newAuthor.Books = new List<Book>();
         AdultController.AddAuthor(newAuthor);
         NavigationManager.NavigateTo("/");
-            
     }
 }

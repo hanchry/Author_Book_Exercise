@@ -4,8 +4,8 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using AuthorAPI.DataAccess.Data;
 using AuthorAPI.DataAccess.Database;
-using AuthorAPI.Models;
 using Microsoft.AspNetCore.Mvc;
+using Model;
 
 namespace AuthorAPI.Controllers
 {

@@ -1,12 +1,14 @@
 @page "/BookList"
-@using AuthorAPI.Models
 @using AuthorBlazor.Data
 @using Microsoft.AspNetCore.Authentication.OAuth.Claims
+@using Model
+@using System.Collections
 @inject NavigationManager NavigationManager
+@inject IAdultController adultController
 @inject IBookController bookController
 <h3>BookList</h3>
 
-@if (booksToShow == null)
+@if (authorsToShow == null)
 {
     <p>
         <em>Loading...</em>
@@ -26,38 +28,42 @@ else
         </tr>
         </thead>
         <tbody>
-        @foreach (var item in booksToShow)
+        @foreach (var author in authorsToShow)
         {
-            <tr>
-                <td>@item.Tittle</td>
-                <td>@item.PublicationYear</td>
-                <td>@item.NumberOfPages</td>
-                <td>@item.Author.FirsName</td>
-                <td>@item.Author.LastName</td>
-                <td>
-                    <button @onclick="@(() => Delete(item))">
-                        <i class="oi oi-trash" style="color:red"/>
-                    </button>
-                </td>
-            </tr>
+            foreach (var book in author.Books)
+            {
+                <tr>
+                    <td>@book.Tittle</td>
+                    <td>@book.PublicationYear</td>
+                    <td>@book.NumberOfPages</td>
+                    <td>@author.FirsName</td>
+                    <td>@author.LastName</td>
+                    <td>
+                        <button @onclick="@(() => Delete(book, author.Id))">
+                            <i class="oi oi-trash" style="color:red"/>
+                        </button>
+                    </td>
+
+                </tr>
+            }
         }
         </tbody>
     </table>
 }
 
 @code {
-    private IList<Book> booksToShow;
-    private IList<Book> allBooks;
+    private IList<Author> allAuthors;
+    private IList<Author> authorsToShow;
 
     protected override async Task OnInitializedAsync()
     {
-        allBooks = await bookController.GetBook();
-        booksToShow = allBooks;
+        allAuthors = await adultController.GetAuthor();
+        authorsToShow = allAuthors;
     }
 
-    private async void Delete(Book item)
+    private async void Delete(Book item, int id)
     {
-        booksToShow.Remove(item);
+        allAuthors.FirstOrDefault(t => t.Id == id).Books.Remove(item);
         await bookController.DeleteBook(item);
     }
 
